@@ -1,11 +1,12 @@
-import {Text, View} from 'react-native';
+import {Box} from 'native-base';
 import React from 'react';
+import Header from '../components/Header';
 
 const HomeScreen = () => {
   return (
-    <View style={{flex: 1, backgroundColor: '#fff'}}>
-      <Text>HomeScreen</Text>
-    </View>
+    <Box style={{flex: 1, backgroundColor: '#fff'}}>
+      <Header />
+    </Box>
   );
 };
 
