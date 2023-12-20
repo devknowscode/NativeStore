@@ -13,7 +13,7 @@ const LoginScreen = () => {
       marginVertical={10}
       marginHorizontal={10}>
       <Box w="full" flex={2} gap={5}>
-        <AuthHeader />
+        <AuthHeader headerText="Sign In" />
         <Box marginHorizontal={5}>
           <Heading size={'xl'} fontWeight={'semibold'}>
             Hello
