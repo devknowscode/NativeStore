@@ -1,11 +1,11 @@
-import {Text, View} from 'react-native';
 import React from 'react';
+import {Box, Text} from 'native-base';
 
 const OrderScreen = () => {
   return (
-    <View style={{flex: 1, backgroundColor: '#fff'}}>
+    <Box>
       <Text>OrderScreen</Text>
-    </View>
+    </Box>
   );
 };
 

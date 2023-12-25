@@ -20,12 +20,14 @@ const BottomTabs = () => {
       screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: '#3665f3',
-        tabBarInactiveTintColor: 'gray',
-        tabBarShowLabel: false,
+        tabBarInactiveTintColor: '#9f9f9f',
+        tabBarLabelStyle: {
+          fontSize: 12,
+          fontWeight: 'bold',
+          marginBottom: 5,
+        },
         tabBarStyle: {
           backgroundColor: '#f7f7f7',
-          borderTopWidth: 0,
-          elevation: 0,
           height: 60,
         },
       }}>
@@ -34,34 +36,28 @@ const BottomTabs = () => {
         component={HomeScreen}
         options={{
           tabBarLabel: 'Home',
-          tabBarLabelStyle: {color: '#3665f3'},
-          headerShown: false,
           tabBarIcon: ({color}) => {
-            return <Foundation name="home" size={30} color={color} />;
+            return <Foundation name="home" size={26} color={color} />;
           },
         }}
       />
       <Tab.Screen
-        name="Search"
-        component={SearchScreen}
+        name="Account"
+        component={AccountScreen}
         options={{
-          tabBarLabel: '',
-          tabBarLabelStyle: {color: '#3665f3'},
-          headerShown: false,
+          tabBarLabel: 'Account',
           tabBarIcon: ({color}) => (
-            <FontAwesome name="search" size={24} color={color} />
+            <FontAwesome name="user-circle-o" size={24} color={color} />
           ),
         }}
       />
       <Tab.Screen
-        name="Order"
-        component={OrderScreen}
+        name="Search"
+        component={SearchScreen.Finding}
         options={{
-          tabBarLabel: '',
-          tabBarLabelStyle: {color: '#3665f3'},
-          headerShown: false,
+          tabBarLabel: 'Search',
           tabBarIcon: ({color}) => (
-            <FontAwesome6 name="box" size={24} color={color} />
+            <FontAwesome name="search" size={22} color={color} />
           ),
         }}
       />
@@ -69,30 +65,26 @@ const BottomTabs = () => {
         name="Notifications"
         component={NotificationScreen}
         options={{
-          tabBarLabel: '',
-          tabBarLabelStyle: {color: '#3665f3'},
-          headerShown: false,
+          tabBarLabel: 'Notifications',
           tabBarIcon: ({focused, color}) =>
             focused ? (
-              <MaterialIcons name="notifications" size={30} color={color} />
+              <MaterialIcons name="notifications" size={28} color={color} />
             ) : (
               <MaterialIcons
                 name="notifications-none"
-                size={30}
+                size={28}
                 color={color}
               />
             ),
         }}
       />
       <Tab.Screen
-        name="Account"
-        component={AccountScreen}
+        name="Order"
+        component={OrderScreen}
         options={{
-          tabBarLabel: '',
-          tabBarLabelStyle: {color: '#3665f3'},
-          headerShown: false,
+          tabBarLabel: 'Order',
           tabBarIcon: ({color}) => (
-            <FontAwesome name="user-circle-o" size={26} color={color} />
+            <FontAwesome6 name="box" size={22} color={color} />
           ),
         }}
       />
